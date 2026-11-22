@@ -1,0 +1,25 @@
+{
+  "name": "api",
+  "exports": {
+    "./rpc": {
+      "types": "./src/rpc.ts"
+    }
+  },
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "db:generate": "bun run --bun drizzle-kit generate",
+    "db:migrate": "bun run --bun drizzle-kit migrate"
+  },
+  "dependencies": {
+    "@hono/structured-logger": "catalog:",
+    "drizzle-orm": "catalog:",
+    "hono": "catalog:",
+    "pino": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "drizzle-kit": "catalog:",
+    "pino-pretty": "catalog:"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "create-aa-stack",
+  "version": "0.0.0",
+  "description": "Opinionated full-stack starter with end-to-end type safety: Vite+, React, shadcn/ui, Hono RPC, Drizzle.",
+  "homepage": "https://github.com/Abdullah0AA/aa-stack#readme",
+  "bugs": "https://github.com/Abdullah0AA/aa-stack/issues",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abdullah0AA/aa-stack.git"
+  },
+  "bin": {
+    "create-aa-stack": "./dist/index.mjs"
+  },
+  "files": [
+    "dist",
+    "templates"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "vp pack",
+    "test:templates": "vp pack && vpx scripts/test-templates.ts",
+    "release": "bumpp --no-push",
+    "prepare": "vp config",
+    "prepublishOnly": "vp pack"
+  },
+  "dependencies": {
+    "@clack/prompts": "^1.9.0",
+    "bingo": "^0.16.2",
+    "bingo-fs": "^0.8.0",
+    "yaml": "^2.9.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "bumpp": "^12.3.0",
+    "vite": "npm:@voidzero-dev/vite-plus-core@8.3.8000",
+    "vite-plus": "1.7.0"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.21.0",
+      "onFail": "download"
+    }
+  },
+  "engines": {
+    "node": ">=26.0.0"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "dev:api": "vp run api#dev",
+    "dev:full": "vp run --parallel --filter ./apps/api --filter ./apps/web dev"
+  }
+}
